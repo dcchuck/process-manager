@@ -1,25 +1,29 @@
 {
-  "name": "process-manager",
-  "version": "1.0.0",
-  "description": "Process manager built on OpenFin",
-  "main": "server.js",
-  "dependencies": {},
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-      "deploy" : "aws s3 cp ./ s3://cdn.openfin.co/demos/process-manager/ --exclude 'node_modules/**' --exclude '.git/**' --exclude '.idea/**' --recursive --cache-control max-age=60",
-      "start": "node server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/openfin/process-manager.git"
-  },
-  "keywords": [
-    "openfin"
-  ],
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/openfin/process-manager/issues"
-  },
-  "homepage": "https://github.com/openfin/process-manager#readme"
+    "name": "process-manager",
+    "version": "1.0.0",
+    "description": "Process manager built on OpenFin",
+    "main": "server.js",
+    "dependencies": {
+        "express": "^4.16.3",
+        "openfin-launcher": "^1.4.4"
+    },
+    "devDependencies": {},
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "deploy": "aws s3 cp ./ s3://cdn.openfin.co/demos/process-manager/ --exclude 'node_modules/**' --exclude '.git/**' --exclude '.idea/**' --recursive --cache-control max-age=60",
+        "start": "node server.js",
+        "openfin-local": "node openfin.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/openfin/process-manager.git"
+    },
+    "keywords": [
+        "openfin"
+    ],
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/openfin/process-manager/issues"
+    },
+    "homepage": "https://github.com/openfin/process-manager#readme"
 }
